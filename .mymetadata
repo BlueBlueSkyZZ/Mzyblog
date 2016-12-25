@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Mzyblog"
+  id="myeclipse.1476863192770"
+  context-root="/Mzyblog"
+  j2ee-spec="5.0"
+  archive="Mzyblog.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,18 @@
+﻿body{
+	background:#f2f2f2;
+	font-size:12px;
+	line-height:1.8;
+	color:3c3c3c;
+
+}
+html,body{height:99%;}
+
+
+.login_logo {margin-top:230px; text-align:center;}
+.login {background:url(../images/login_03.jpg); width:356px; height:154px; margin:auto; position:relative;}
+.login_1 {position:absolute; top:28px; left:65px;}
+.login_1 input {border:0px; background:none; line-height:22px; font-size:12px; color:#FFF; width:260px; height:22px;}
+.login_2 {position:absolute; top:72px; left:65px;}
+.login_2 input {border:0px; background:none; line-height:22px; font-size:12px; color:#FFF; width:260px; height:22px;}
+.login_4 {position:absolute; top:110px; right:30px;}
+
