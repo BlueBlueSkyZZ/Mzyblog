@@ -39,12 +39,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		border: solid 2px red;
 	}
 	</style>
+	
   </head>
   
   <body>
     <div class="box1">
 		<h1>用户注册</h1>
 		<div class="innerbox">
+		
 			<form action="servlet/RegServlet" method="post">
 				<label>请输入您的用户名：</label>
 				<input type="text" id="username" /><br>

@@ -26,31 +26,90 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				document.getElementById("imagecode").src = "<%=request.getContextPath()%>/servlet/ImageServlet?d="+ time;
 			}
 	</script>
-  </head>
+	<style type="text/css">
+		#container1{
+			float:left;
+			height:500px;
+			width:500px;
+			border:solid #B1CEBC;
+			padding-left:50px;
+			padding-right:50px;
+		}
+		
+		.logo{
+			color:#4B5B51;
+			font-size:60px;
+			text-align:center;
+		}
+		
+		.biggest{
+			height:100%;
+			width:80%;
+			
+			text-align:center;
+			margin:0px auto;
+			
+		}
+		
+		.pic{
+			float:left;
+			width:500px;
+			height:50px;
+			margin-top:100px;
+		
+		}
+	</style>
+	<link rel="stylesheet" href="bootstrap/style/css/bootstrap.min.css"/>
+	
+	</head>
   
   <body>
-    <div id="container">
-    	<div class = "logo" >
-    		<a href="#"><img src="asserts/logo.png" alt=""></a>
-    	</div>
-    	<div id = "box">
-    		<form name="loginForm" action="servlet/LoginServlet" method="post">
-    		<p>
-    			<label>用户名：</label>
-    			<input name="username" type="text"/><br><br>
-    			<label>密码：</label>
-    			<input name="password" type="password"/>
-    		</p>
-    		验证码:<input type="text" name="checkcode"/>
-	     	<img alt="验证码" id="imagecode" src="<%=request.getContextPath()%>/servlet/ImageServlet"/>
-	     	<a href="javascript:reloadCode()">看不清楚</a><br> <!-- 刷新图片 -->
-	     	<input type="submit" value="提交">
-    		<p>
-    			<a href = "register.jsp">还没注册？？亲，赶快！！</a>
-    		</p>
-    		</form>
-    		
-    	</div>
+  <div class="biggest">
+	 	 <div class = "logo" >
+	    		Welcome to My Blog
+	    </div>
+	    
+	    <div class = "pic">
+	    	<img src="images/pic.jpeg" alt="logo">
+	    </div>
+	    
+	    <div id="container1">
+	    	<br>
+	    	<h2>账号登录</h2>
+	    	
+	    	<br>
+	    	<div id = "box">
+	    		<form name="loginForm" action="servlet/LoginServlet" method="post">
+	    		<p>
+	    		<div class="input-group">
+	  				<span class="input-group-addon">用户名：</span>
+	  				<input name="username" type="text" class="form-control" style="width:200px;" placeholder="Username">
+				</div>
+	    		<br>
+	    		<div class="input-group">
+	  				<span class="input-group-addon">密 码：</span>
+	  				<input name="password" type="text" class="form-control" style="width:210px;" placeholder="Password">
+				</div>
+				<br>
+				<div class="input-group">
+					<span class="input-group-addon">验证码</span>
+					<input type="text" class="form-control" style="width:110px;" name="checkcode">
+					<img alt="验证码" id="imagecode" style="padding-right:50px;" src="<%=request.getContextPath()%>/servlet/ImageServlet"/>
+		     	
+				</div>
+				<br>
+		     	
+		     	<input type="submit" value="登录" class="btn btn-primary" style="float:left;width:70px;margin-left:70px;">
+		     	<a href="javascript:reloadCode()" style="float:right;padding-right:100px;">看不清楚</a><br> <!-- 刷新图片 -->
+		     	<br>
+		     	
+	    		<p>
+	    			<a href = "register.jsp">还没注册？？亲，赶快！！</a>
+	    		</p>
+	    		</form>
+	    		
+	    	</div>
+	    </div>
     </div>
   </body>
 </html>

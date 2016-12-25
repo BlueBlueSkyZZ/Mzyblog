@@ -23,22 +23,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<title>register</title>
 	<style type="text/css">
 	
+	#container1{
+			float:left;
+			height:500px;
+			width:500px;
+			
+			padding-left:50px;
+			padding-right:50px;
+		}
+	
 	.box1
 	{
-		padding: 0px 300px 200px 200px;
-		height: 200px;
+		margin:50px auto;
+		/*padding: 0px 300px 200px 200px;*/
+		height: 60%;
 		width: 500px;
-		border: solid 1px blue;
+		border: solid 1px #B1CEBC;
 	}
 
-	.innerbox
+	.innerbox1
 	{
-		padding:  100px 120px;
 		height: 70px;
 		width: 200px;
-		border: solid 2px red;
+		/*border: solid 2px red;*/
+		position:relative;
+		
+	}
+	
+	h1{
+		text-align:center;
 	}
 	</style>
+	<link rel="stylesheet" href="bootstrap/style/css/bootstrap.min.css"/>
 	<script type="text/javascript">
 		function reg()
 		{
@@ -69,23 +85,50 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 		}
 	</script>
+	
   </head>
   
   <body>
     <div class="box1">
+    	<button type="button" class="btn btn-default btn-lg">
+    		<a href="login4.jsp"><span class="glyphicon glyphicon-arrow-left"></span>返回</a>
+  			
+		</button>
+    	
 		<h1>用户注册</h1>
-		<div class="innerbox">
-			<label>请输入您的用户名：</label>
-			<input type="text" id="username" /><br>
-			<label>请输入您的密码：</label>
-			<input type="password" id="password" /><br>
-			<label>请确认密码：</label>
-			<input type="password" id="confirmp" /><br>	
-			<input type="button" value="注册" id="register" onclick="reg()"/>
-			<p id="createResult"></p>
-			<!-- <button id="save">注册</button> -->
-		</div>
+		<br>
+		<div id="container1">
+				<div class="input-group">
+	  				<span class="input-group-addon">请输入您的用户名：</span>
+	  				<input id="username" type="text" class="form-control" style="width:200px;" placeholder="Username">
+				</div>
+	    		<br>
+	    		<div class="input-group">
+	  				<span class="input-group-addon">请输入您的密码：</span>
+	  				<input id="password" type="text" class="form-control" style="width:210px;" placeholder="Password">
+				</div>
+				<br>
+				<div class="input-group">
+					<span class="input-group-addon">请确认密码：</span>
+					<input id="confirmp" type="text" class="form-control" style="width:230px;" name="checkcode">
+				</div>
+				<br>
+				<input type="button" value="注册" id="register" class="btn btn-info" onclick="reg()"/>
+				
+				<div class="innerbox1">
+					<p id="createResult"></p>
+					<!-- <button id="save">注册</button> -->
+				</div>
+			</div>
+		
+		
+			
+			
+			
+			
 	</div>
-	
+			
+				
+				
   </body>
 </html>

@@ -28,6 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		height: 70px;
 		width: 200px;
 		border: solid 2px red;
+		float:left;
 	}
 	.title
 	{
@@ -35,6 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		height: 200px;
 		width: 400px;
 		border: solid 2px blue;
+		float:left;
 	}
 	</style>
   </head>

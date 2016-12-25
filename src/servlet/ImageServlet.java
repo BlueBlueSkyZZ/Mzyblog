@@ -44,12 +44,15 @@ public class ImageServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		BufferedImage bi = new BufferedImage(68, 22, BufferedImage.TYPE_INT_RGB);//宽、高、三色
+		BufferedImage bi = new BufferedImage(68, 34, BufferedImage.TYPE_INT_RGB);//宽、高、三色
 		Graphics g = bi.getGraphics();//为组件创建一个图形
 		Color c = new Color(200, 150, 255);//设置三原色
 		g.setColor(c);
-		g.fillRect(0, 0, 68, 22);//FillRect函数用指定的画刷填充矩形
-		
+		g.fillRect(0, 0, 68, 34);//FillRect函数用指定的画刷填充矩形
+		c = new Color(255, 255, 255);
+		g.setColor(c);
+		g.drawLine(0, 0, 68, 34);
+		g.drawLine(20, 0, 88, 34);//干扰线
 		char[] ch = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
 		Random r = new Random();//随机数
 		int len = ch.length,index;
@@ -58,7 +61,7 @@ public class ImageServlet extends HttpServlet {
 		{
 			index = r.nextInt(len);//随机返回一个小于len的整数
 			g.setColor(new Color(r.nextInt(88), r.nextInt(188), r.nextInt(255)));//随机生成颜色
-			g.drawString(ch[index]+"", (i*15)+3, 18);//绘制字符 ！！！需要使用JRE1.7及以下版本
+			g.drawString(ch[index]+"", (i*15)+3, 24);//绘制字符 ！！！需要使用JRE1.7及以下版本
 			
 			
 			sb.append(ch[index]);//往动态字符串数组添加绘制的字符
