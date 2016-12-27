@@ -24,6 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<link rel="stylesheet" href="bootstrap/style/css/bootstrap.min.css"/>
 	<style type="text/css">
 	.artcontent
 	{

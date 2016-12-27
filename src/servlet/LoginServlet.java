@@ -125,7 +125,7 @@ public class LoginServlet extends HttpServlet {
 		}
 		else
 		{
-			out.println("验证码输入错误！！！");
+			out.println("验证码输入错误！！！<a href=\""+request.getContextPath()+"/login4.jsp\">返回登录页面</a>");
 		}
 		out.flush();//输出流刷新
 		out.close();//关闭流 

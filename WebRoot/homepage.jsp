@@ -21,23 +21,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
+	<link rel="stylesheet" href="bootstrap/style/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="bootstrap/style/js/bootstrap.min.js"/>
 	<style type="text/css">
 	.box1
 	{
-		padding:  100px 120px;
+		
 		height: 70px;
-		width: 200px;
+		width: 15%;
 		border: solid 2px red;
 		float:left;
+		margin-left:10%;
+		padding-left:20px;padding-top:20px;
 	}
 	.title
 	{
-		padding:  100px 240px;
-		height: 200px;
+	
+		height: 300px;
 		width: 400px;
 		border: solid 2px blue;
 		float:left;
+		padding-left:5%;padding-top:2%;
 	}
 	.showmore
 	{
@@ -46,6 +50,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		padding-top: 100px;
 	}
 	</style>
+
+	<script>
+      $(function(){
+          $('.dropdown-toggle').dropdown();
+      });
+  </script>
   </head>
   
   <body>
@@ -60,7 +70,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	  <a href="servlet/LoginOutServlet">退出</a><br>
 	<hr>
 	<div class = "box1">
+		<img src="images/login_logo.jpg" alt="..." class="img-circle">
+		<br>
 		<a href="homepage.jsp" >最新文章</a><br>
+		
 		<a href="myarticle.jsp" >我的文章</a><br>
 	</div>
 	<div class="title">

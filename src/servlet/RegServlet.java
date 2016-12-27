@@ -97,7 +97,7 @@ public class RegServlet extends HttpServlet {
 					else
 					{
 						regdao.addUserToDB(usernameser, passwordser);//将用户加入数据库
-						out.println("注册成功");
+						out.println("注册成功<br>");
 						out.println(usernameser+"\\"+passwordser);
 						out.println("<a href = 'login4.jsp'>返回登录页面</a>");
 						//out.println("<script type='text/javascript'>location.href = 'login_success.jsp'</script>");

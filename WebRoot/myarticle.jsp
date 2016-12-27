@@ -21,10 +21,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<link rel="stylesheet" href="bootstrap/style/css/bootstrap.min.css"/>
+	
 	<style type="text/css">
 	.box1
 	{
-		padding:  100px 120px;
 		height: 70px;
 		width: 200px;
 		border: solid 2px red;
@@ -32,8 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	.title
 	{
-		padding:  100px 240px;
-		height: 200px;
+		height: 300px;
 		width: 400px;
 		border: solid 2px blue;
 		float:left;
@@ -53,13 +53,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <a href="servlet/LoginOutServlet">退出</a><br>
 	<hr>
 	<div class = "box1">
-		<a href="homepage.jsp" >最新文章</a><br>
-			
+		<div><a href="homepage.jsp" >最新文章</a><br></div>
 		
-		<a href="myarticle.jsp" >我的文章</a>
+		<div><a href="myarticle.jsp" >我的文章</a></div>
+		
+		
 	</div>
+	<!-- <div class="widget"></div> -->
 	<div class="title">
-		<a href="write.jsp">+写新文章</a><br>
+	
+	
+	<button type="button" class="btn btn-default btn-lg">
+    		<a href="write.jsp" >
+		<span class="glyphicon glyphicon-plus"></span>
+		写新文章</a>
+  			
+		</button>
+	
+	<br>
 		<%
 			WriteDAO writeDao = new WriteDAO();//新建文章逻辑类
 			ArrayList<Article> list = writeDao.getAllArticle();//获取所有文章信息的列表
